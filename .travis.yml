@@ -30,6 +30,6 @@ env:
     - "DB=mongodb TEST_ENV=development"
     - "DB=redis TEST_ENV=production"
     - "DB=postgres TEST_ENV=production"
-addons:
-  apt:
-    sour
+# addons:
+#   apt:
+#     sour
