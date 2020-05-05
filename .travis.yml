@@ -5,7 +5,7 @@ services:
 before_install:
   - cp install/package.json package.json
   - sudo apt-get update
-  - sudo apt-get --yes remove postgresql\*
+  - sudo apt-get -y remove postgresql\*
   - sudo apt-get install -y postgresql-12 postgresql-client-12
   - sudo cp /etc/postgresql/{9.6,12}/main/pg_hba.conf
   - sudo service postgresql restart 12
@@ -32,16 +32,4 @@ env:
     - "DB=postgres TEST_ENV=production"
 addons:
   apt:
-    sources:
-      - ubuntu-toolchain-r-test
-      - mongodb-4.0-xenial
-    packages:
-      - g++-4.8
-      - mongodb-org-server
-node_js:
-  - "12"
-  - "10"
-branches:
-  only:
-    - master
-    - develop
+    sour
